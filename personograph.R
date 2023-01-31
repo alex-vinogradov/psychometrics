@@ -8,7 +8,7 @@ df <- expand.grid(
 
 ## Draw sample
 df$Sample <- factor(
-  sample(x = 1:2, size = 100, replace = TRUE),
+  sample(x = 1:2, size = 100, replace = TRUE, prob = c(0.2, 0.8)),
   labels = c("Unselected", "Selected")
 )
 
