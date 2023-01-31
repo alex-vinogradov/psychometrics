@@ -8,4 +8,6 @@ df <- expand.grid(
 df$symbol <- sample(x = 1:2, size = 100, replace = TRUE)
 
 ggplot(data = df, mapping = aes(X, Y, color = symbol)) + 
-  geom_point(size = 10) + theme_void()
+  geom_point(size = 10) +
+  theme(legend.position = "none") + 
+  theme_void()
