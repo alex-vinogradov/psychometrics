@@ -12,7 +12,13 @@ df$Sample <- factor(
   labels = c("Unselected", "Selected")
 )
 
+df$Value <- sample(x = 1:9, size = 100, replace = TRUE)
+
 ## Plot sample
-ggplot(data = df, mapping = aes(Column, Row, color = Sample)) + 
-  geom_point(size = 8) + 
+ggplot(
+  data = df, mapping = aes(
+    x = Column, y = Row, color = Sample, label = Value
+    )) + 
+  geom_point(size = 12) + 
+  geom_label(hjust = 0.5, vjust = 0.5) + 
   theme_grey()
