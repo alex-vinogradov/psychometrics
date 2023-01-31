@@ -2,8 +2,8 @@ library(ggplot2)
 
 ## Create 10 x 10 grid
 df <- expand.grid(
-  X = 1:10,
-  Y = 1:10
+  Column = factor(1:10),
+  Row = factor(1:10)
 )
 
 ## Draw sample
@@ -13,8 +13,5 @@ df$Sample <- factor(
 )
 
 ## Plot sample
-ggplot(data = df, mapping = aes(X, Y, color = Sample)) + 
-  geom_point(size = 10) +
-  theme_void()
-
-## One more comment
+ggplot(data = df, mapping = aes(Column, Row, color = Sample)) + 
+  geom_point(size = 8)
