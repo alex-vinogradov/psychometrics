@@ -14,4 +14,5 @@ df$Sample <- factor(
 
 ## Plot sample
 ggplot(data = df, mapping = aes(Column, Row, color = Sample)) + 
-  geom_point(size = 8)
+  geom_point(size = 8) + 
+  theme_dark()
