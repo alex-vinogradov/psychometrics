@@ -19,6 +19,7 @@ ggplot(
   data = df, mapping = aes(
     x = Column, y = Row, color = Sample, label = Value
     )) + 
-  geom_point(size = 12) + 
+  geom_point(size = 14) + 
   geom_label(hjust = 0.5, vjust = 0.5) + 
-  theme_grey()
+  theme(legend.position = "none") + 
+  xlab("") + ylab("")
